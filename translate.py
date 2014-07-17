@@ -44,12 +44,12 @@ csv_files = {
 	'file_names' : [],
 }
 
-for root, dirnames, filenames in os.walk('/vagrant/teste'):
+for root, dirnames, filenames in os.walk('path_to_HTML_files'):
 	for filename in fnmatch.filter(filenames, '*.html'):
 		html_files['paths'].append(root)
 		html_files['file_names'].append(filename)
 
-for root, dirnames, filenames in os.walk('/vagrant/teste'):
+for root, dirnames, filenames in os.walk('path_to_CSV_files'):
 	for filename in fnmatch.filter(filenames, '*.csv'):
 		csv_files['paths'].append(root)
 		csv_files['file_names'].append(filename)
